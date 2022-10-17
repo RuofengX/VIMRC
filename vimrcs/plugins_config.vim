@@ -153,7 +153,7 @@ nnoremap <silent> <leader>z :Goyo<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
 \   'javascript': ['eslint'],
-\   'python': ['flake8'],
+\   'python': ['flake8', 'mypy'],
 \   'go': ['go', 'golint', 'errcheck']
 \}
 
@@ -163,8 +163,8 @@ nmap <silent> <leader>a <Plug>(ale_next_wrap)
 let g:ale_set_highlights = 0
 
 " Only run linting when saving the file
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = "never"
+let g:ale_lint_on_enter = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -196,4 +196,4 @@ let g:jedi#goto_assignments_command = "<leader>a"
 let g:jedi#usages_command = "<leader>u"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<leader>r"
-let g:jedi#popup_on_dot = 0
+let g:jedi#popup_on_dot = 1

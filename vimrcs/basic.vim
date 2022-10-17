@@ -33,7 +33,10 @@
 " Sets how many lines of history VIM has to remember
 set history=500
 
-" Enable filetype plugins
+" Sets line number
+set nu
+
+"Enable filetype plugins
 filetype plugin on
 filetype indent on
 
@@ -151,8 +154,6 @@ set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
-    set guioptions-=T
-    set guioptions-=e
     set t_Co=256
     set guitablabel=%M\ %t
 endif
