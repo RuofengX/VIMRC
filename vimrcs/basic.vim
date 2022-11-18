@@ -36,6 +36,9 @@ set history=500
 " Sets line number
 set nu
 
+" Set W to w
+map :W :w
+
 "Enable filetype plugins
 filetype plugin on
 filetype indent on
@@ -83,7 +86,7 @@ endif
 set ruler
 
 " Height of the command bar
-set cmdheight=1
+set cmdheight=2
 
 " A buffer becomes hidden when it is abandoned
 set hid

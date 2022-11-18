@@ -157,13 +157,13 @@ let g:ale_linters = {
 \   'go': ['go', 'golint', 'errcheck']
 \}
 
-nmap <silent> <leader>a <Plug>(ale_next_wrap)
+nmap <silent> <leader>e <Plug>(ale_next_wrap)
 
 " Disabling highlighting
-let g:ale_set_highlights = 0
+let g:ale_set_highlights = 1
 
 " Only run linting when saving the file
-let g:ale_lint_on_text_changed = "never"
+"let g:ale_lint_on_text_changed = "never"
 let g:ale_lint_on_enter = 1
 
 
@@ -191,9 +191,21 @@ xnoremap <leader>v :GBrowse!<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => jedi-vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:jedi#auto_vim_configuration = 0
+let g:jedi#auto_initialization = 1
+let g:jedi#auto_vim_configuration = 1
+let g:jedi#show_call_signatures = 2
+let g:jedi#show_call_signatures_delay = 0
+let g:jedi#use_tabs_not_buffers = 1
 let g:jedi#goto_assignments_command = "<leader>a"
+let g:jedi#smart_auto_mappings = 1
 let g:jedi#usages_command = "<leader>u"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<leader>r"
 let g:jedi#popup_on_dot = 1
+let g:jedi#popup_select_first = 1
+let g:jedi#auto_close_doc = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vimspector
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:vimspector_enable_mappings = 'HUMAN'
